@@ -50,6 +50,33 @@ foreach ($infoUser->fetchAll() as $user){
     echo "</div>";
 }
 
+echo "<br>";
+$infoUser = $conn->prepare("SELECT * FROM exo_194.user ORDER BY id DESC ");
+$infoUser->execute();
+
+foreach ($infoUser->fetchAll() as $user){
+    echo "<div class='infoUsers'>";
+    echo "<p><span>Nom: </span>".$user["nom"]."</p>";
+    echo "<p><span>Prenom: </span>".$user["prenom"]."</p>";
+    echo "<p><span>Rue: </span>".$user["rue"]."</p>";
+    echo "<p><span>Numero: </span>".$user["numero"]."</p>";
+    echo "<p><span>Code postal: </span>".$user["code_postal"]."</p>";
+    echo "<p><span>Ville: </span>".$user["ville"]."</p>";
+    echo "<p><span>Pays: </span>".$user["pays"]."</p>";
+    echo "<p><span>Mail: </span>".$user["mail"]."</p>";
+    echo "</div>";
+}
+echo "<br>";
+$infoUser = $conn->prepare("SELECT nom, prenom FROM exo_194.user");
+$infoUser->execute();
+
+foreach ($infoUser->fetchAll() as $user){
+    echo "<div class='infoUsers'>";
+    echo "<p><span>Nom: </span>".$user["nom"]."</p>";
+    echo "<p><span>Prenom: </span>".$user["prenom"]."</p>";
+    echo "</div>";
+}
+
 ?>
 
 </body>
