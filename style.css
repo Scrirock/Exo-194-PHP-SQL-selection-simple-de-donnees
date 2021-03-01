@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    font-size: 2rem;
+}
+
+span{
+    text-decoration-line: underline;
+    font-weight: bold;
+}
+
+.infoUsers{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 2rem;
+    margin-left: 2rem;
+    margin-top: 5rem;
+    padding: 2rem;
+}
